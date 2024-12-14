@@ -1,0 +1,16 @@
+name: CI Workflow
+
+on: 
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    stepes:
+    - name: Pull repo
+      uses: actions/checkout@v4
+    - name: Hello World
+      run: ech 'Hello World'
